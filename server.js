@@ -20,7 +20,11 @@ const startServer = async () => {
 
     // Rutas
     const usersRoutes = (await import('./src/routes/usersRoutes.js')).default
+    const apartmentsRoutes = (await import('./src/routes/apartmentsRoutes.js'))
+      .default
+
     app.use('/users', usersRoutes)
+    app.use('/apartments', apartmentsRoutes)
 
     // Ejecución de la aplicación
     app.listen(PORT, () => {
