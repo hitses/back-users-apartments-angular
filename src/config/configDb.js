@@ -4,7 +4,7 @@ const dbConfig = {
   port: 3306, // Puerto de conexión
   username: 'root', // Nombre de usuario (CAMBIAR EN CASO DE CAMBIO CUENTA)
   password: '', // Contraseña (CAMBIAR EN CASO DE CAMBIO CUENTA)
-  database: 'myDbName', // Nombre de la base de datos
+  database: 'db_jero', // Nombre de la base de datos
   dialect: 'mysql' // Tipo de base de datos (usado por Sequelize)
 }
 

@@ -1,6 +1,8 @@
 import createDb from './createDb.js'
 import sequelize from './db.js'
 
+// Añadir modelos de los modelos en el directorio models
+
 const connectDb = async () => {
   await createDb()
 
