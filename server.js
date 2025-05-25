@@ -20,7 +20,7 @@ const startServer = async () => {
 
     // Rutas
     const usersRoutes = (await import('./src/routes/usersRoutes.js')).default
-    app.use('/users', usersRoutes) // Sustituir por la ruta de la API de tu aplicación
+    app.use('/users', usersRoutes)
 
     // Ejecución de la aplicación
     app.listen(PORT, () => {
