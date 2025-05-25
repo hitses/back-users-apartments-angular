@@ -19,8 +19,8 @@ const startServer = async () => {
     app.disable('x-powered-by') // Desactiva el header X-Powered-By, aumentando la seguridad
 
     // Rutas
-    const cardsRoutes = (await import('./src/routes/cardsRoutes.js')).default
-    app.use('/cards', cardsRoutes) // Sustituir por la ruta de la API de tu aplicación
+    const usersRoutes = (await import('./src/routes/usersRoutes.js')).default
+    app.use('/users', usersRoutes) // Sustituir por la ruta de la API de tu aplicación
 
     // Ejecución de la aplicación
     app.listen(PORT, () => {
