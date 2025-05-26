@@ -7,7 +7,7 @@ class ApartmentsService {
 
   async create(apartmentData) {
     try {
-      return await apartmentModel.create(apartmentData)
+      return await apartmentModel.create(apartmentData) // <- Crea el apartamento en la base de datos con Sequelize
     } catch (error) {
       throw error
     }
@@ -15,7 +15,7 @@ class ApartmentsService {
 
   async findAll() {
     try {
-      return await apartmentModel.findAll()
+      return await apartmentModel.findAll() // <- Obtiene todos los apartamentos de la base de datos con Sequelize
     } catch (error) {
       throw error
     }
@@ -23,7 +23,7 @@ class ApartmentsService {
 
   async find(apartmentId) {
     try {
-      const apartment = await apartmentModel.findByPk(apartmentId)
+      const apartment = await apartmentModel.findByPk(apartmentId) // <- Busca un apartamento por su ID en la base de datos con Sequelize
 
       if (!apartment) throw new Error('Apartment not found')
 
@@ -35,9 +35,9 @@ class ApartmentsService {
 
   async update(apartmentId, apartmentData) {
     try {
-      const apartment = await this.find(apartmentId)
+      const apartment = await this.find(apartmentId) // <- Busca el apartamento por su ID con la función find() de más arriba
 
-      return await apartment.update(apartmentData)
+      return await apartment.update(apartmentData) // <- Actualiza el apartamento con los nuevos datos en la base de datos con Sequelize
     } catch (error) {
       throw error
     }
@@ -45,9 +45,9 @@ class ApartmentsService {
 
   async delete(apartmentId) {
     try {
-      const apartment = await this.find(apartmentId)
+      const apartment = await this.find(apartmentId) // <- Busca el apartamento por su ID con la función find() de más arriba
 
-      return await apartment.destroy()
+      return await apartment.destroy() // <- Elimina el apartamento de la base de datos con Sequelize
     } catch (error) {
       throw error
     }

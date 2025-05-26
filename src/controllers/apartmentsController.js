@@ -4,6 +4,7 @@ class ApartmentsController {
   constructor() {
     this.apartmentService = new ApartmentsService()
     this.apartmentService.initialize().catch(err => {
+      // Si peta Sequelize al inicializar el servicio, mejor se para a tiempo, capturamos el error y se envía un mensaje de error al usuario
       console.error('Error initializing ApartmentsService')
       throw err
     })
@@ -32,7 +33,7 @@ class ApartmentsController {
       const apartment = await this.apartmentService.find(req.params.id)
       res.json(apartment)
     } catch (error) {
-      res.status(404).json({ error: error.message })
+      res.status(404).json({ error: error.message }) // Se han usado diferentes códigos de estado HTTP para los errores en las diferentes funciones, pero por mostrarlos, ya que su uso real sería mucho más complejo y detallado
     }
   }
 

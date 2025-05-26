@@ -16,7 +16,8 @@ const createDb = async () => {
     `SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = '${database}'`
   )
 
-  // Si la base de datos no existe, se crea
+  // Si la base de datos no existe, se crea... En serio, con MongoDB esto no es necesario. Mucho lío para una base de datos con dos modelos. ¡Viva MongoDB!
+  // Nah... En realidad MySQL está bien, pero por pelearme con José María, lo que haga falta
   if (results.length === 0) {
     await tempSequelize.query(`CREATE DATABASE ${database};`)
 

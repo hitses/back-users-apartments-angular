@@ -11,6 +11,7 @@ const Apartment = sequelize.define(
     floor: { type: DataTypes.INTEGER, allowNull: false },
     description: { type: DataTypes.STRING, allowNull: false },
     price: { type: DataTypes.DECIMAL(10, 2), allowNull: false },
+    // Se han añadido las propiedades createdAt y updatedAt para llevar un control de las fechas de creación y actualización del modelo y por costumbre, aunque no se usen en el proyecto
     createdAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
     updatedAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
   },
