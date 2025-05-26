@@ -6,6 +6,11 @@ class UsersService {
   }
 
   async create(userData) {
+    userData.username = userData.username.toLowerCase()
+    userData.firstName = userData.firstName.toLowerCase()
+    userData.lastName = userData.lastName.toLowerCase()
+    userData.email = userData.email.toLowerCase()
+
     try {
       return await userModel.create(userData)
     } catch (error) {
