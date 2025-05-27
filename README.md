@@ -1,12 +1,14 @@
 # Backend para Frontend Angular
 
-<!-- DISCLAIMER: todos los comentarios generales añadidos en el código de este proyecto se pueden tener en cuenta también para el servidor usado para la aplicaciónd de Dashboard de React. -->
+<!-- DISCLAIMER: todos los comentarios generales añadidos en el código de este proyecto se pueden tener en cuenta también para el servidor usado para la aplicación de Dashboard de React. -->
 
 Este servidor se encarga de manejar las solicitudes de los administradores y proporcionar información de las bases de datos para el proyecto de [Frontend de Angular](https://github.com/hitses/front-users-apartments-angular).
 
-## Instalación
+## Configuración
 
-Es necesario tener instalado [Node.js](https://nodejs.org/es) en el sistema para poder ejecutar el servidor en la versión 22.X.X (versión usada 22.13.0) o superior.
+- [Node.js](https://nodejs.org/es/) 22.X.X (versión utilizada en el desarrollo 22.13.0)
+
+## Instalación
 
 Para instalar las dependencias necesarias, ejecuta el siguiente comando en la terminal:
 
